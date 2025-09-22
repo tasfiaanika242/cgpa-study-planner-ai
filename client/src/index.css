@@ -1,0 +1,38 @@
+/* Reset page chrome so MUI can control width/centering */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove the Vite demo cap that pushed everything left */
+#root {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: initial; /* don't force center across the app */
+}
+
+/* AppBar toolbar spans full width → auth buttons pin to far right */
+.MuiAppBar-root .MuiToolbar-root {
+  width: 100%;
+}
+
+/* Containers are centered with balanced gutters */
+.MuiContainer-root {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
+/* Center the hero block (your 900px Stack) inside the Container */
+.heroCenter {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  align-items: center; /* center children horizontally */
+}
+
+/* (Optional) Keep any demo styles you rely on */
+.card { padding: 2em; }
+.read-the-docs { color: #888; }
